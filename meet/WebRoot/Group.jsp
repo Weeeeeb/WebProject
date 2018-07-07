@@ -17,6 +17,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="./js/moment-timezone-with-data-2012-2022.min.js"></script>
     <script src="./js/jquery-1.6.2.min.js"></script>
     <script src="./js/prototype.js"></script>
+    <style>
+        body{
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    </style>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -724,16 +732,16 @@ var AvailableIDs=new Array();
                 <div id="LeftPanel">
                 
                     <div id="SignIn">
-                        <div class="GridTitle">Sign In<br>
+                        <div class="GridTitle">登录<br>
                             <div class="GridSubtitle">
                                 <table>
-                                    <tbody><tr><td>Your Name:</td><td align="left"><input style="width:150px" id="name"></td></tr>
-                                    <tr><td>Password (optional):</td><td align="left"><input style="width:150px" id="password" type="password"></td></tr>
+                                    <tbody><tr><td>用户名:</td><td align="left"><input style="width:150px" id="name"></td></tr>
+                                    <tr><td>密码（可选）:</td><td align="left"><input style="width:150px" id="password" type="password"></td></tr>
                                     </tbody></table>
                                 <input type="button" value="Sign In" onclick="ProcessLogin()"><br><br>
-                                Name/Password are only for this event.<br>
-                                New to this event? Make up a password.<br>
-                                Returning? Use the same name/password.          </div>
+                                对于该事件账户唯一.<br>
+                                新用户直接输入用户名密码就可注册登录<br>
+                                使用账户可重新修改选择的时间段</div>
                         </div>
                     </div>
                     
@@ -751,7 +759,7 @@ var AvailableIDs=new Array();
                                 <td bgcolor="#339900">&nbsp;</td></tr></tbody></table></div>
                         </div>
 
-                            Click and Drag to Toggle; Saved Immediately</div>
+                            单击并拖动选择时间; 立即保存</div>
                         </div><br clear="all">
 						
 				<div style="display:inline-block;*display:inline;zoom:1; vertical-align:bottom;text-align:right;">
@@ -770,8 +778,8 @@ var AvailableIDs=new Array();
                 </div>
                 <div style="display:inline-block;*display:inline;zoom:1;vertical-align:bottom;text-align:right;">
 					<c:forEach var="s" items="${bigtime }">
-						<div style="display:inline-block;*display:inline;zoom:1;text-align:center;font-size:10px;width:44px;padding-right:1px;"><c:out value="${s.getMonthandDate() }"></c:out><br>
-						<div style="display:inline-block;*display:inline;zoom:1;font-size:16px;"><c:out value="${s.getDay() }"></c:out></div></div>
+						<div style="display:inline-block;*display:inline;zoom:1;text-align:center;font-size:10px;width:44px;padding-right:1px;"><c:out value="${s.getDate() }"></c:out><br>
+						<div style="display:inline-block;*display:inline;zoom:1;font-size:16px;">Fri</div></div>
 					</c:forEach>
 					
 				<div id="YouGridSlots" class="GroupGrid" style="background-color:white; display:inline">
@@ -799,7 +807,7 @@ var AvailableIDs=new Array();
     <div id="GroupAvailability">
         <div id="GroupGrid">
             <div class="GridTitle" style="display:inline-block;*display:inline;zoom:1; margin-left:40px;">
-                Group's Availability<div class="GridSubtitle"><div style="padding:5px" ;=""><div id="MinAvailable" style="display:inline-block;*display:inline;zoom:1;">0/0</div>&nbsp;Available<div id="GroupKey" style="display:inline-block;*display:inline;zoom:1;vertical-align:middle;padding:0px 5px 0px 5px;"><table width="100" height="10" cellpadding="0" cellspacing="0" style="border: solid 1px black"><tbody><tr><td bgcolor="#808080">&nbsp;</td></tr></tbody></table></div><div id="MaxAvailable" style="display:inline-block;*display:inline;zoom:1;">0/0</div>&nbsp;Available</div>Mouseover the Calendar to See Who Is Available</div>
+                Group's Availability<div class="GridSubtitle"><div style="padding:5px" ;=""><div id="MinAvailable" style="display:inline-block;*display:inline;zoom:1;">0/0</div>&nbsp;Available<div id="GroupKey" style="display:inline-block;*display:inline;zoom:1;vertical-align:middle;padding:0px 5px 0px 5px;"><table width="100" height="10" cellpadding="0" cellspacing="0" style="border: solid 1px black"><tbody><tr><td bgcolor="#808080">&nbsp;</td></tr></tbody></table></div><div id="MaxAvailable" style="display:inline-block;*display:inline;zoom:1;">0/0</div>&nbsp;Available</div>鼠标悬浮可查看该单元的用户选择情况</div>
        		</div><br clear="all">
        		
 				<div style="display:inline-block;*display:inline;zoom:1; vertical-align:bottom;text-align:right;">
@@ -818,8 +826,8 @@ var AvailableIDs=new Array();
                 </div>
                 <div style="display:inline-block;*display:inline;zoom:1;vertical-align:bottom;text-align:right;">
 					<c:forEach var="s" items="${bigtime }">
-						<div style="display:inline-block;*display:inline;zoom:1;text-align:center;font-size:10px;width:44px;padding-right:1px;"><c:out value="${s.getMonthandDate() }"></c:out><br>
-						<div style="display:inline-block;*display:inline;zoom:1;font-size:16px;"><c:out value="${s.getDay() }"></c:out></div></div>
+						<div style="display:inline-block;*display:inline;zoom:1;text-align:center;font-size:10px;width:44px;padding-right:1px;"><c:out value="${s.getDate() }"></c:out><br>
+						<div style="display:inline-block;*display:inline;zoom:1;font-size:16px;">Fri</div></div>
 					</c:forEach>
 					
 				<div id="GroupGridSlots" class="GroupGrid" style="background-color:white; display:inline">

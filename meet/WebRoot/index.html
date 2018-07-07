@@ -1,13 +1,21 @@
 <html><head>
-    <title>When2meet</title>
+    <title>见面呀</title>
     <link rel="StyleSheet" href="./css/style.css" type="text/css" media="screen">
     <link rel="StyleSheet" href="./css/style2.css" type="text/css" media="screen">
     <link rel="StyleSheet" href="./css/style3.css" type="text/css" media="screen">
     <script src="./js/moment.js"></script>
     <script src="./js/moment-timezone-with-data-2012-2022.min.js"></script>
     <script src="./js/jquery-3.2.1.js"></script>
+    <style>
+        body{
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    <meta name="description" content="When2meet helps you find the best time for a group to get together. It is a free survey tool that is quick and easy to use.">
+}
+    </style>
+
+    <meta name="description" content="见面呀 helps you find the best time for a group to get together. It is a free survey tool that is quick and easy to use.">
     <meta name="keywords" content="scheduler, group, availability, free/busy, when to meet,meeting, planning,calendar">
 
     <!-- Facebook Conversion Code for Page Views - The More We Get Together - Video Views -->
@@ -392,12 +400,12 @@ function PreSubmitCheck() {
     </td></tr>
     <tr><td align="center" valign="top" rowspan="2">
         <div id="WhatDates" style="text-align: center; width: 50%; min-width:305px;">
-            What dates might work?<div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;">
-            <nobr>Click and drag dates to choose possibilities.</nobr><br>
-            <nobr>Click and drag labels to shift the calendar.</nobr><br>
-            Survey using: <select id="DateTypes" name="DateTypes" onchange="DateTypesChanged()">
-            <option value="SpecificDates">Specific Dates</option>
-            <option value="DaysOfTheWeek">Days of the Week</option>
+            选择日期<div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;">
+            <nobr>点击拖动日期可以选择合适的日子</nobr><br>
+            <nobr>点击并拖动旁边的标签可以切换日历页面</nobr><br>
+            选择日期方式: <select id="DateTypes" name="DateTypes" onchange="DateTypesChanged()">
+            <option value="SpecificDates">按日期数</option>
+            <option value="DaysOfTheWeek">按星期数</option>
         </select>
 
         </div>
@@ -558,18 +566,18 @@ function PreSubmitCheck() {
 <!--右边的 表单  --> 
 <td align="center" valign="top">
     <div id="WhatTimes" style="text-align: center; width: 50%; min-width:305px;"><center>
-        What times might work?<div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;">
+        选择时间段<div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;">
         <!-- <input type=checkbox name="AllDayEvent"> All-day event -->&nbsp;</div>
 
         <div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;">
-            No earlier than: <select name="NoEarlierThan">
+            最早开始事件时间: <select name="NoEarlierThan">
             <option value="0">midnight</option>  <option value="1">1 am</option>  <option value="2">2 am</option>  <option value="3">3 am</option>  <option value="4">4 am</option>  <option value="5">5 am</option>  <option value="6">6 am</option>  <option value="7">7 am</option>  <option value="8">8 am</option>  <option selected="" value="9">9 am</option>  <option value="10">10 am</option>  <option value="11">11 am</option>  <option value="12">noon</option>  <option value="13">1 pm</option>  <option value="14">2 pm</option>  <option value="15">3 pm</option>  <option value="16">4 pm</option>  <option value="17">5 pm</option>  <option value="18">6 pm</option>  <option value="19">7 pm</option>  <option value="20">8 pm</option>  <option value="21">9 pm</option>  <option value="22">10 pm</option>  <option value="23">11 pm</option>  <option value="0">midnight</option></select></div>
 
         <div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;">
-            No later than: <select name="NoLaterThan">
+            最晚结束时间: <select name="NoLaterThan">
             <option value="0">midnight</option>  <option value="1">1 am</option>  <option value="2">2 am</option>  <option value="3">3 am</option>  <option value="4">4 am</option>  <option value="5">5 am</option>  <option value="6">6 am</option>  <option value="7">7 am</option>  <option value="8">8 am</option>  <option value="9">9 am</option>  <option value="10">10 am</option>  <option value="11">11 am</option>  <option value="12">noon</option>  <option value="13">1 pm</option>  <option value="14">2 pm</option>  <option value="15">3 pm</option>  <option value="16">4 pm</option>  <option selected="" value="17">5 pm</option>  <option value="18">6 pm</option>  <option value="19">7 pm</option>  <option value="20">8 pm</option>  <option value="21">9 pm</option>  <option value="22">10 pm</option>  <option value="23">11 pm</option>  <option value="0">midnight</option></select></div>
         <div style="font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px;" id="TimeZoneTextAndSelect">
-            In <select name="TimeZone" id="TimeZone"></select>
+            选择时区：<select name="TimeZone" id="TimeZone"></select>
         </div>
         <div style="display: none; font-size:12px;line-height:1.5; margin: 10px 0px 10px 0px; width: 200px;" id="NoTimeZoneSelect">
             For "Days of the Week" events, it is expected that all participants are in a single time zone.

@@ -25,5 +25,10 @@ Web Engineer Project
 
 项目部署环境
 
-Linux操作系统+JDK环境+Tomcat服务器+Mysql数据库
+阿里云服务器 Centos7.3操作系统+JDK1.8环境+Tomcat应用服务器+Mysql数据库
+
+域名：http://meetos.top/ 目前在备案审核中，暂时无法访问
+地址：http://60.205.220.197/
+
+
 

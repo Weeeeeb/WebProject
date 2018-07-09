@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <title>如何使用</title>
+    <script src="./js/QRCode.js" ></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="StyleSheet" href="./css/style.css" type="text/css" media="screen">
+    <link rel="StyleSheet" href="./css/style2.css" type="text/css" media="screen">
+    <link rel="StyleSheet" href="./css/style3.css" type="text/css" media="screen">
+    
+    <link rel="shortcut icon" href="ioc.png" />
+    
+    <script src="./js/moment.js"></script>
+    <script src="./js/moment-timezone-with-data-2012-2022.min.js"></script>
+    <script src="./js/jquery-3.2.1.js"></script>
+    <style>
+        body{
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+} </style>
+    <meta name="description" content="几点呀 helps you find the best time for a group to get together. It is a free survey tool that is quick and easy to use.">
+    <meta name="keywords" content="scheduler, group, availability, free/busy, when to meet,meeting, planning,calendar">
+
+    <!-- Facebook Conversion Code for Page Views - The More We Get Together - Video Views -->
+
+
+    <!-- Facebook Conversion Code for student video views -->
+
+    <style type="text/css">
+            body{margin: 0;}         
+            #text{
+                outline: none;
+                width: 200px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                padding-left: 10px;
+            }
+            #qrcode{
+                position:absolute;
+                left:90%;
+                top:5%;
+                z-index:99;
+            }
+        </style>
+
+</head>
+    
+    
+    <script type="text/javascript">
+            function touchdiv(){
+                document.getElementById('show').style.display='block';
+            }
+            function outdiv(){         
+                document.getElementById('show').style.display='none';
+ 
+            }
+            
+    </script>
+<body>
+    <div id="show" style="display:none">
+        <div id="qrcode">                
+        </div>
+        
+    </div>
+    
+<div id=MenuTop>
+  <div id=MenuTopLeft>
+    <a href="about_us.html" >关于我们</a>
+    <a href="index.html" class=selected>新建事件</a>
+
+  </div>
+  <div id=MenuTopRight>
+            
+            <input id="text" type="text" style="display:none;" value="12"/>
+            
+            <div id="touch"  onmouseout="outdiv()" onmouseover="touchdiv()"><a>分享</a></div>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            var url = location.href;
+            let elText = document.getElementById("text");
+            elText.setAttribute("value",url);
+            let qrcode = new QRCode(document.getElementById("qrcode"), {
+                width : 120,
+                height : 120
+            });
+            function makeCode(){
+                if (!elText.value) {
+                    elText.onfocus();
+                    return;
+                }
+                qrcode.makeCode(elText.value);
+            }
+            makeCode();
+            elText.addEventListener('blur',function(){
+                makeCode();
+            },false);
+            elText.addEventListener('keydown',function(e){
+                if(e.keyCode === 13)makeCode();
+            },false);
+        }())
+    </script>
+
+
+<br clear=all>
+</div>
+		<h3 style="text-align: center;font-family: 等线">几点呀用户使用说明书</h3><br>
+		<div id="text" style="width: 80%">
+			<div style="position: absolute;left: 10%">一、用户创建一个EVENT<br>
+			用户先自定义一个用户名和密码，用于参与接下来的事件。然后确定时间的名称和时事件的生存周期，点击login按钮，进入到接下来的事件。<br>
+			二、用户将链接发送给团队的其他成员<br>
+			点击登入后跳转到分享页面，用户可以选择将链接二维码选择分享到qq或者微信。<br>
+			三、用户开始一个EVENT事件<br>
+			用户在页面左边中给的事件表格中选中自己有空闲的时间，然后选择提交，事件结束。<br>
+			四、用户查看团队空闲时间<br>
+			用户在浏览器中点击刷新按钮，在select页面中可以看到页面右边的团队时间表格中，会根据成员勾选的时间表格呈现出不同的颜色，颜色越深表明这个时间段有空的成员数量越多。<br>
+			</div>
+		</div>
+	
+		
+<br clear=all>
+	<div class="page-footer">
+	            <div class="container">
+	                <div class="md2018040301lty clearfix">
+	                    <div class="bt-lf clearfix pull-left">
+	                        <ul class="links clearfix">
+	                            <a href="Noname1.html">如何使用</a>
+	                            <a href="" style="pointer-events: none;">加入我们</a>
+	                            <a href="" style="pointer-events: none">联系我们</a>
+	                            <a href="" style="pointer-events: none">商务合作</a>
+	                            <a href="" target="_blank" style="pointer-events: none">给个好评</a>
+	                        </ul>
+	                        <p class="copyright">几点呀工作室©版权所有</p>
+	                    </div>
+	                    <div class="bt-line"></div>
+	                </div>
+	            </div>
+	        </div>
+	        <img src="meow.png" style="position: absolute;right:0px;bottom: 0px;height: 150px;width: 200px;" alt="图片加载失败">
+
+ </body>
+
+</html>

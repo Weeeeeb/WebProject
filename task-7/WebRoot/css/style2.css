@@ -1,0 +1,128 @@
+.GridTitle {
+  margin-left:40px;
+}
+
+.GridSubtitle {
+  font-size:12px;
+  line-height:1.5;
+  margin: 10px 0px 10px 0px;
+}
+
+.GridSubtitle.td {
+  font-size:12px;
+}
+
+.HalfPanel {
+  white-space: nowrap;
+  align:right;
+  padding-bottom:4px;
+  text-align:center;
+  font-size:18px;
+  display:inline-block;
+}
+
+body {
+  margin: 0px;
+  border: 0px;
+  font-family: arial, helvetica;
+  
+}
+
+body{
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+#MenuTop {
+  font-size: 16px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background:#B4CDCD;
+  color: #dedede; 
+}
+
+#MenuTopLeft {
+  float: left;
+}
+  
+#MenuTopRight {
+  float: right;
+}
+
+#MenuTop a {
+  display: block;
+  float: left;
+  padding: 2px 10px 6px 10px;
+  color: white;
+  font-family: 等线;
+  font-weight: lighter;
+  text-decoration: none;
+
+}
+
+#MenuTop a:hover {
+  background-color:#dedede;
+  color:black;
+
+}
+
+
+#MainBody {
+  padding: 10px;
+  background-color:white;
+}
+.md2018040301lty .bt-lf .copyright {
+        color: #666;
+        margin-left:-4px;
+        position: absolute;
+        left: 45%;
+        bottom: 0px;
+      }
+.md2018040301lty .bt-lf .links {
+        margin: 0 -17px 15px;
+        position: absolute;
+        left: 36%;
+        bottom: 50px;
+      }
+
+.md2018040301lty .bt-lf .links {
+        float: left;
+        color: #666;
+        font-size: 14px;
+        margin: 0 14px;
+      }
+
+.md2018040301lty .bt-lf .links  a {
+        color: #666;
+      }
+
+.md2018040301lty .bt-lf .links a:hover {
+        color: #fff;
+      }
+.clearfix:after {
+        clear: both;
+        content: ".";
+        display: block;
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+      }
+
+.clearfix {
+        *zoom: 1
+      }
+
+#text{
+  font-family: 等线;
+}
+
+#MainBody2 {
+	padding: 10px;
+  	background-color:white;
+  	padding: 10px;
+	
+}
